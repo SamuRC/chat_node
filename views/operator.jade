@@ -1,0 +1,22 @@
+//
+   Created by Samuel on 28/08/2014.
+extends layout
+block header
+    script(src='/js/operator.js')
+block content
+    div.container
+        div.jumbotron
+            h3 Inicio de sesión - OPERADOR
+            div
+                form#frm_enter_chat.form-horizontal(action='/operator', method='POST', role='form')
+                    div.form-group
+                        label.col-sm-3.control-label(for='username') Usuario
+                        div.col-sm-9
+                            input#username.form-control(type='text', name='username', placeholder='Ingrese su usuario')
+                    div.form-group
+                        label.col-sm-3.control-label(for='password') Contraseña
+                        div.col-sm-9
+                            input#password.form-control(type='password', name='password', placeholder='Ingrese su contraseña')
+                    div.form-group
+                        div.col-sm-offset-2.col-sm-10
+                            button#enter_chat.btn.btn-default Ingresar

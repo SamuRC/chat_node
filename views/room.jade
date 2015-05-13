@@ -1,0 +1,18 @@
+extends layout
+block header
+    script(src='/js/room.js')
+    script(src='/socket.io/socket.io.js')
+    link(rel='stylesheet', href='/css/room.css')
+
+block content
+    div.container
+        div.jumbotron
+            h3 Chat de consultas HACOM
+            h6 Bienvenido al Chat de consultas Hacom, realice su consulta y se le atenderá en breve.
+            div
+                div#msj_container
+                    div#msj_historial
+                textarea#msj_text(rows=3, placeholder='Ingrese su mensaje')
+                button#send_msj.btn.btn-default Enviar
+
+

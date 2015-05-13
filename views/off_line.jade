@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div.container
+    div.jumbotron
+      h3 Chat en línea HACOM - OFFLINE
+      div
+          form.form-horizontal(role='form')
+              div.form-group
+                  label.col-sm-3.control-label(for='client_name') Nombre
+                  div.col-sm-9
+                      input#client_name.form-control(type='text', placeholder='Nombre')
+              div.form-group
+                  label.col-sm-3.control-label(for='client_email') Correo electrónico
+                  div.col-sm-9
+                      input#client_email.form-control(type='email', placeholder='Correo electrónico')
+              div.form-group
+                  label.col-sm-3.control-label(for='client_phone') Teléfono
+                  div.col-sm-9
+                      input#client_phone.form-control(type='text', placeholder='Teléfono')
+              div.form-group
+                  label.col-sm-3.control-label(for='client_query') Consulta
+                  div.col-sm-9
+                      textarea#client_query.form-control(rows=6, placeholder='Consulta')
+              div.form-group
+                  div.col-sm-offset-2.col-sm-10
+                      button#send_query.btn.btn-default(onclick="alert('samu clock')") Enviar mensaje

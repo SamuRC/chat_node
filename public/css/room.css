@@ -1,0 +1,11 @@
+#msj_container{
+    border: 1px solid #85B5D9;
+    height: 260px;
+    margin-top: 30px;
+    overflow-y: auto;
+}
+
+#msj_text{
+    margin-top: 20px;
+    width: 100%
+}

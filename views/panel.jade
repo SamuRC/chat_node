@@ -1,0 +1,13 @@
+extends layout
+block header
+    script(src='/js/panel.js')
+    script(src='/socket.io/socket.io.js')
+    //link(rel='stylesheet', href='/css/room.css')
+block content
+    div.container
+        div.jumbotron
+            h3 Lista de salas (clientes)
+            h6 Bienvenido a la lista de salas, haga doble clic para ingresar a una.
+            div#rooms_list.list-group
+                each user, i in user_list
+                    a(id=user.creation_time, href="#", class="list-group-item")= user.name

@@ -1,0 +1,27 @@
+//
+   Created by samurc on 02/02/14.
+extends layout
+block header
+    script(src='/js/on_line.js')
+
+block content
+    div.container
+        div.jumbotron
+            h3 Chat en línea HACOM - ONLINE
+            div
+                form#frm_enter_chat.form-horizontal(action='/on_line', method='POST', role='form')
+                    div.form-group
+                        label.col-sm-3.control-label(for='name') Nombre
+                        div.col-sm-9
+                            input#name.form-control(type='text', name='name', placeholder='Ingrese un nombre')
+                    div.form-group
+                        label.col-sm-3.control-label(for='email') Correo electrónico
+                        div.col-sm-9
+                            input#email.form-control(type='email', name='email', placeholder='Ingrese un email')
+                    div.form-group
+                        label.col-sm-3.control-label(for='phone') Teléfono
+                        div.col-sm-9
+                            input#phone.form-control(type='text', name='phone', placeholder='Ingrese un teléfono')
+                    div.form-group
+                        div.col-sm-offset-2.col-sm-10
+                            button#enter_chat.btn.btn-default Ingresar
